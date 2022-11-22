@@ -23,10 +23,10 @@ body::before {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(bottom, white, #F9E6B3);
-    background: -o-linear-gradient(bottom, white, #F9E6B3);
-    background: -moz-linear-gradient(bottom, white, #F9E6B3);
-    background: linear-gradient(bottom, white, #F9E6B3);
+    background: -webkit-linear-gradient(bottom, rgb(196, 183, 144), #d6b045);
+    background: -o-linear-gradient(bottom, rgb(196, 183, 144), #d6b045);
+    background: -moz-linear-gradient(bottom, rgb(196, 183, 144), #d6b045);
+    background: linear-gradient(bottom, rgb(196, 183, 144), #d6b045);
     opacity: .8
 }
 input{
@@ -48,7 +48,7 @@ input{
   h2{
     animation-duration: 3s;
     animation-name: slidein;
-    color:#f7bc1bcc;
+    color:#bd8619cc;
     text-align: center;
   }
   label{
@@ -80,7 +80,7 @@ input{
 .header{
     padding: 20px;
 }
-.form{
+.formulario{
     padding: 20px;
 
 }
@@ -97,10 +97,10 @@ input{
     display: block;
     border-radius: 10px;
     font-size: 14px;
-    background-color: #eff17a34;
+    background-color: #eeecd35e;
     width: 100%;
     padding: 10px;
-    color: #F9E6B3 ;
+    color: #080808 ;
 }
 
 .form-control i {
@@ -117,8 +117,8 @@ input{
     visibility: hidden;
 }
 
-.form button {
-    background-color: #f7c336;
+.formulario button {
+    background-color: #c7a23c;
     border: none;
     cursor: pointer;
     color: #fff;
@@ -153,7 +153,7 @@ input{
     color: #e74c3c;
 }
 label{
-    color:#f7c336;
+    color:#c7a23c;
 }
 input::placeholder {
     color: #c2a8be94;
@@ -163,7 +163,7 @@ input::placeholder {
 }
 .texto{
     margin-left: 140%;
-    color: rgba(155, 148, 148, 0.767);
+    color: rgba(95, 92, 83, 0.753);
     font-size: 18px;
     text-align:center;
     width: 325px

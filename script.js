@@ -1,11 +1,12 @@
 
-const form = document.getElementById("form")
+const formulario = document.getElementById("formulario")
 const username = document.getElementById("username")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
 const passwordConfirmation = document.getElementById("password-confirmation")
 const celular = document.getElementById('celular')
-form.addEventListener('submit',(e) =>{
+
+formulario.addEventListener('submit',(e) =>{
     e.preventDefault()
     //vamos chamar a função checkInputs que criamos aqui
     checkInputs()
