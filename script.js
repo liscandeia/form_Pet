@@ -6,6 +6,15 @@ const password = document.getElementById("password")
 const passwordConfirmation = document.getElementById("password-confirmation")
 const celular = document.getElementById('celular')
 
+function PreviewImage() {
+    var oFReader = new FileReader();
+    oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+    oFReader.onload = function (oFREvent) {
+        document.getElementById("uploadPreview").src = oFREvent.target.result;
+    };
+};
+
 formulario.addEventListener('submit',(e) =>{
     e.preventDefault()
     //vamos chamar a função checkInputs que criamos aqui
