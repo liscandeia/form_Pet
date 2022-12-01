@@ -57,11 +57,25 @@ function checkInputs(){
     }
     if (celularValue === "") {
         setErrorFor(celular, "O número de celular é obrigatório.")
-    }else if (celularValue.length != 11 ) {
+    }else if (celularValue.length != 15 ) {
         setErrorFor(celular, "O seu telefone precisa ter 11 números.")
     }else {
         setSuccessFor(celular);
     }
+}
+const $input = document.querySelector('[data-js="input"]')
+$input.addEventListener('input', handleInput, false)
+
+function handleInput (e) {
+  e.target.value = phoneMask(e.target.value)
+}
+
+function phoneMask (celular) {
+  return celular.replace(/\D/g, '')
+    .replace(/^(\d)/, '($1')
+    .replace(/^(\(\d{2})(\d)/, '$1) $2')
+    .replace(/(\d{5})(\d{1,4})/, '$1-$2')
+    .replace(/(-\d{4})\d+?$/, '$1');
 }
 function checkEmail(email) {
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
